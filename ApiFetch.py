@@ -32,7 +32,7 @@ def clistby():
             os.makedirs(responseFolder)
         fileName = f"events.json"
         storageAddress = os.path.join(responseFolder,fileName)
-        with open("ResponcesRecorded/events.json","w") as jsonFile:
+        with open("ResponcesRecorded/events.json","a") as jsonFile:
             json.dump(contests,jsonFile)
         return jsonify(contests)
     except requests.exceptions.RequestException as e:
